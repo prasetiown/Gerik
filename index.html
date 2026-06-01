@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerik - Control Everything with Gestures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">Gerik</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gestures" class="nav-link">Gestures</a></li>
+                <li><a href="#integration" class="nav-link">Integration</a></li>
+                <li><a href="#value" class="nav-link">Why Gerik</a></li>
+                <li><a href="#cta" class="nav-link">Download</a></li>
+            </ul>
+            <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="nav-cta">Get on Store</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1 class="hero-headline">Control Your World with Gestures</h1>
+                <p class="hero-subheadline">Turn your hands and body movements into powerful desktop controls. Play games, control apps, and interact with your screen—all without touching anything.</p>
+                <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="btn btn-primary">Download Now</a>
+            </div>
+            <div class="hero-right">
+                <div class="video-container">
+                    <button class="play-btn" id="playBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/AWmXxlSha6s?si=zRpxBwWuofTp7MSF" title="Gerik Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Gesture Section -->
+    <section id="gestures" class="gestures">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Supported Gestures</h2>
+                <p class="section-subtitle">Full hand and body recognition for complete control</p>
+            </div>
+            <div class="gestures-grid">
+                <div class="gesture-card">
+                    <div class="gesture-icon">👊</div>
+                    <h3>Closed Fist</h3>
+                    <p>Click or grip actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">✋</div>
+                    <h3>Open Hand</h3>
+                    <p>Release or push actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">☝️</div>
+                    <h3>Pointing</h3>
+                    <p>Navigate and select</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">✌️</div>
+                    <h3>Victory Sign</h3>
+                    <p>Zoom or double click</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">👌</div>
+                    <h3>OK Sign</h3>
+                    <p>Confirm or scroll</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤌</div>
+                    <h3>Pinch</h3>
+                    <p>Precise interactions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤟</div>
+                    <h3>Rock On</h3>
+                    <p>Custom actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">👍</div>
+                    <h3>Thumbs Up</h3>
+                    <p>Affirmative actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">👎</div>
+                    <h3>Thumbs Down</h3>
+                    <p>Negative actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤜</div>
+                    <h3>Left Punch</h3>
+                    <p>Directional control</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤛</div>
+                    <h3>Right Punch</h3>
+                    <p>Directional control</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🙌</div>
+                    <h3>Both Hands Up</h3>
+                    <p>Multiple actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤲</div>
+                    <h3>Cupped Hands</h3>
+                    <p>Holding actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤝</div>
+                    <h3>Handshake</h3>
+                    <p>Pairing gestures</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🧍</div>
+                    <h3>Standing Pose</h3>
+                    <p>Body detection</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🚶</div>
+                    <h3>Walking Motion</h3>
+                    <p>Movement tracking</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤸</div>
+                    <h3>Jumping</h3>
+                    <p>Full body actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">💪</div>
+                    <h3>Arm Flex</h3>
+                    <p>Strength actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤳</div>
+                    <h3>Phone Gesture</h3>
+                    <p>Selfie mode actions</p>
+                </div>
+                <div class="gesture-card">
+                    <div class="gesture-icon">🎮</div>
+                    <h3>Game Ready</h3>
+                    <p>Gaming mode active</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section id="integration" class="integration">
+        <div class="container">
+            <h2 class="section-title">Developer Integration</h2>
+            <p class="section-subtitle">Extend Gerik's power to your apps and games</p>
+            
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Hand & Body Pose Data</h3>
+                    <p>Access real-time MediaPipe detection results with hand and body coordinates</p>
+                    <code class="integration-code">ws://127.0.0.1:2014</code>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Livestream Image Feed</h3>
+                    <p>Get the camera feed that powers the gesture detection in real-time</p>
+                    <code class="integration-code">http://127.0.0.1:2015</code>
+                </div>
+            </div>
+
+            <div class="integration-info">
+                <p><strong>Easy Integration:</strong> Developers can build custom controllers, interactive experiences, and AI-powered applications by tapping into Gerik's gesture detection capabilities. Whether you're building gaming tools, educational software, or innovative interfaces—Gerik's API gives you the gesture data you need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="value" class="value-proposition">
+        <div class="container">
+            <h2 class="section-title">Why Choose Gerik?</h2>
+            <p class="section-subtitle">Transform how you interact with your computer</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>Affordable Innovation</h3>
+                    <p>Professional gesture control at a price everyone can afford. Check pricing on Microsoft Store.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎮</div>
+                    <h3>Game Without Limits</h3>
+                    <p>Play any online or offline game using natural hand and body movements instead of traditional controllers.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🖥️</div>
+                    <h3>Universal App Control</h3>
+                    <p>Control any Windows desktop application with intuitive gestures. Works with everything you already use.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">👆</div>
+                    <h3>Touchscreen Effect</h3>
+                    <p>Turn any connected screen into an interactive, gesture-controlled touchscreen without hardware modifications.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>Lightning Fast Response</h3>
+                    <p>Real-time gesture recognition with minimal latency for responsive and immersive control.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h3>Local & Private</h3>
+                    <p>Everything runs on your machine. No data sent to servers. Complete control and privacy guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="final-cta">
+        <div class="container">
+            <h2 class="cta-headline">Ready to Transform Your Desktop?</h2>
+            <p class="cta-subheadline">Join thousands of users who control their world with gestures</p>
+            <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="btn btn-large">Download Gerik Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">🎯 Gerik</div>
+                <p class="footer-credit">Created with passion for gesture control</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gerik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
