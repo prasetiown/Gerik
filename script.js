@@ -1,21 +1,58 @@
+// Hamburger Menu Toggle
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+hamburgerBtn.addEventListener('click', function() {
+    hamburgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-menu li a').forEach(link => {
+    link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.navbar-container')) {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
 // Sticky Navigation Bar
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
+    const navbarCTA = document.querySelector('.nav-cta');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
+        // navbarCTA.classList.remove('hide-item');
     } else {
         navbar.classList.remove('scrolled');
+        // navbarCTA.classList.add('hide-item');
+    }
+    if (window.scrollY > screen.height-(screen.height*0.4)) {
+        // navbar.classList.add('scrolled');
+        navbarCTA.classList.remove('hide-item');
+    } else {
+        // navbar.classList.remove('scrolled');
+        navbarCTA.classList.add('hide-item');
     }
 });
 
 // Video Modal
 const playBtn = document.getElementById('playBtn');
 const videoModal = document.getElementById('videoModal');
+const videoGerik = document.getElementById('gerik-video');
 const closeBtn = document.querySelector('.close');
 
 // Open modal when play button is clicked
 playBtn.addEventListener('click', function() {
     videoModal.classList.add('show');
+    videoGerik.src = "https://www.youtube.com/embed/K0CHU78rrbk?si=xHG0Jssmq4T9fpW0;start=0"
     document.body.style.overflow = 'hidden';
 });
 
@@ -29,6 +66,7 @@ closeBtn.addEventListener('click', function() {
 videoModal.addEventListener('click', function(e) {
     if (e.target === videoModal) {
         videoModal.classList.remove('show');
+        videoGerik.src = ""
         document.body.style.overflow = 'auto';
     }
 });
@@ -106,6 +144,6 @@ function toggleMobileMenu() {
 }
 
 // Log app info
-console.log('🎯 Gerik - Control Everything with Gestures');
-console.log('WebSocket API: ws://127.0.0.1:2014');
-console.log('Livestream API: http://127.0.0.1:2015');
+// console.log('🎯 Gerik - Control Everything with Gestures');
+// console.log('WebSocket API: ws://127.0.0.1:2014');
+// console.log('Livestream API: http://127.0.0.1:2015');

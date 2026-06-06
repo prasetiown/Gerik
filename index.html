@@ -6,23 +6,31 @@
     <title>Gerik - Control Everything with Gestures</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">
-                <span class="logo-icon">🎯</span>
+            <a href="#home" class="navbar-logo" style="text-decoration: none;color: rgb(81, 121, 255);">
+                <span class="logo-icon"><img src="assets/logo.png" style="width: 100%;display: flex;"></span>
                 <span class="logo-text">Gerik</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+            </a>
+            <button class="hamburger-menu" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#gestures" class="nav-link">Gestures</a></li>
+                <li><a href="#controller" class="nav-link">Controller</a></li>
                 <li><a href="#integration" class="nav-link">Integration</a></li>
-                <li><a href="#value" class="nav-link">Why Gerik</a></li>
-                <li><a href="#cta" class="nav-link">Download</a></li>
+                <li><a href="#value" class="nav-link">Why Gerik Exists</a></li>
             </ul>
-            <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="nav-cta">Get on Store</a>
+            <!-- <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="nav-cta">Get on Store</a> -->
+            <a class="nav-cta hide-item" href="https://get.microsoft.com/installer/download/9NVZTNZDV336?referrer=appbadge" target="_self" >
+                <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="150"/>
+            </a>
         </div>
     </nav>
 
@@ -31,9 +39,12 @@
         <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-left">
-                <h1 class="hero-headline">Control Your World with Gestures</h1>
+                <h1 class="hero-headline">Control Your Desktop with Gestures</h1>
                 <p class="hero-subheadline">Turn your hands and body movements into powerful desktop controls. Play games, control apps, and interact with your screen—all without touching anything.</p>
-                <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="btn btn-primary">Download Now</a>
+                <a href="https://get.microsoft.com/installer/download/9NVZTNZDV336?referrer=appbadge" target="_self" >
+                    <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
+                </a>
+                <!-- <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="btn btn-primary">Download Now</a> -->
             </div>
             <div class="hero-right">
                 <div class="video-container">
@@ -49,7 +60,8 @@
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe width="100%" height="600" src="https://www.youtube.com/embed/AWmXxlSha6s?si=zRpxBwWuofTp7MSF" title="Gerik Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="gerik-video" width="100%" height="100%" width="auto" src="" title="Gerik Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe id="gerik-video" width="100%" height="600" width="auto" src="https://www.youtube.com/embed/K0CHU78rrbk?si=xHG0Jssmq4T9fpW0;start=0" title="Gerik Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
     </div>
 
@@ -58,140 +70,190 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Supported Gestures</h2>
-                <p class="section-subtitle">Full hand and body recognition for complete control</p>
+                <p class="section-subtitle">See all available hands and body gesture for desktop control</p>
             </div>
-            <div class="gestures-grid">
-                <div class="gesture-card">
-                    <div class="gesture-icon">👊</div>
-                    <h3>Closed Fist</h3>
-                    <p>Click or grip actions</p>
+            
+            <!-- Right Hand Gestures -->
+            <div class="gesture-subsection">
+                <div class="gesture-subsection-header">
+                    <h3 class="gesture-subsection-title">Right Hand</h3>
+                    <p class="gesture-subsection-desc">Desktop control and interaction</p>
                 </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">✋</div>
-                    <h3>Open Hand</h3>
-                    <p>Release or push actions</p>
+                <div class="gestures-grid">
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_index.png" style="width: 80px; height: auto;"></div>
+                        <h4>Left Click</h4>
+                        <p>Pinch thumb and index finger of right hand</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_hold_drag.png" style="width: 140px; height: auto;"></div>
+                        <h4>Drag</h4>
+                        <p>Pinch thumb and index finger of right hand, hold, move hands</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_middle.png" style="width: 80px; height: auto;"></div>
+                        <h4>Right Click</h4>
+                        <p>Pinch thumb and middle finger of right hand</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_scroll.png" style="width: auto; height: 80px;"></div>
+                        <h4>Mouse Scroll</h4>
+                        <p>Pinch thumb and ring finger of right hand, hold, move hands up and down</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_pinky.png" style="width: 80px; height: auto;"></div>
+                        <h4>Enable/Disable Body Gesture</h4>
+                        <p>Pinch thumb and pinky finger of right hand and hold about 3 seconds</p>
+                    </div>
                 </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">☝️</div>
-                    <h3>Pointing</h3>
-                    <p>Navigate and select</p>
+            </div>
+            
+            <!-- Left Hand Gestures -->
+            <div class="gesture-subsection">
+                <div class="gesture-subsection-header">
+                    <h3 class="gesture-subsection-title">Left Hand</h3>
+                    <p class="gesture-subsection-desc">Keyboard and utility controls</p>
                 </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">✌️</div>
-                    <h3>Victory Sign</h3>
-                    <p>Zoom or double click</p>
+                <div class="gestures-grid">
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_index.png" style="width: 80px; height: auto; transform: scaleX(-1);"></div>
+                        <h4>Space Button</h4>
+                        <p>Pinch thumb and index finger of left hand</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_middle.png" style="width: 80px; height: auto; transform: scaleX(-1);"></div>
+                        <h4>Escape Button</h4>
+                        <p>Pinch thumb and middle finger of left hand</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_ring.png" style="width: 80px; height: auto; transform: scaleX(-1);"></div>
+                        <h4>Middle Mouse Click</h4>
+                        <p>Pinch thumb and ring finger of left hand</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/pinch_thumb_pinky.png" style="width: auto; height: 80px; transform: scaleX(-1);"></div>
+                        <h4>Prepared for Next Feature</h4>
+                        <p>Pinch thumb and pinky finger of left hand are still do nothing</p>
+                    </div>
                 </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">👌</div>
-                    <h3>OK Sign</h3>
-                    <p>Confirm or scroll</p>
+            </div>
+            
+            <!-- Body Gestures -->
+            <div class="gesture-subsection">
+                <div class="gesture-subsection-header">
+                    <h3 class="gesture-subsection-title">Body</h3>
+                    <p class="gesture-subsection-desc">Directional and positional controls</p>
                 </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤌</div>
-                    <h3>Pinch</h3>
-                    <p>Precise interactions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤟</div>
-                    <h3>Rock On</h3>
-                    <p>Custom actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">👍</div>
-                    <h3>Thumbs Up</h3>
-                    <p>Affirmative actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">👎</div>
-                    <h3>Thumbs Down</h3>
-                    <p>Negative actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤜</div>
-                    <h3>Left Punch</h3>
-                    <p>Directional control</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤛</div>
-                    <h3>Right Punch</h3>
-                    <p>Directional control</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🙌</div>
-                    <h3>Both Hands Up</h3>
-                    <p>Multiple actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤲</div>
-                    <h3>Cupped Hands</h3>
-                    <p>Holding actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤝</div>
-                    <h3>Handshake</h3>
-                    <p>Pairing gestures</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🧍</div>
-                    <h3>Standing Pose</h3>
-                    <p>Body detection</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🚶</div>
-                    <h3>Walking Motion</h3>
-                    <p>Movement tracking</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤸</div>
-                    <h3>Jumping</h3>
-                    <p>Full body actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">💪</div>
-                    <h3>Arm Flex</h3>
-                    <p>Strength actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🤳</div>
-                    <h3>Phone Gesture</h3>
-                    <p>Selfie mode actions</p>
-                </div>
-                <div class="gesture-card">
-                    <div class="gesture-icon">🎮</div>
-                    <h3>Game Ready</h3>
-                    <p>Gaming mode active</p>
+                <div class="gestures-grid">
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/body_center.png" style="width: 80px; height: auto; align-self: center;"></div>
+                        <h4>Idle Condition</h4>
+                        <p>Make the circle on your chest in the center of camera</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/body_up.png" style="width: 80px; height: auto; align-self: center;"></div>
+                        <h4>Up Arrow</h4>
+                        <p>Make the circle on your chest placed in the 1st row</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/body_down.png" style="width: 80px; height: auto; align-self: center;"></div>
+                        <h4>Down Arrow</h4>
+                        <p>Make the circle on your chest placed in the 3rd row</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/body_left.png" style="width: 80px; height: auto; align-self: center;"></div>
+                        <h4>Left Arrow</h4>
+                        <p>Make the circle on your chest placed in the 1st column</p>
+                    </div>
+                    <div class="gesture-card">
+                        <div class="gesture-icon"><img src="assets/body_right.png" style="width: 80px; height: auto; align-self: center;"></div>
+                        <h4>Right Arrow</h4>
+                        <p>Make white circle on your chest placed in the 3rd column</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Controller Section -->
+    <section id="controller" class="controller">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Easy to Use</h2>
+                <p class="section-subtitle">Intuitive and simple UI control</p>
+            </div>
+            <div class="controller-content">
+                <img src="assets/controller.png" alt="Game Controller Interface" class="controller-image">
+                <div class="controller-info">
+                    <ul class="controller-features">
+                        <li>
+                            <img src="assets/logo.png">
+                            Start and stop gesture detection
+                        </li>
+                        <li>
+                            <i class="fas fa-grip" style="background-color:rgb(77, 77, 77, 0.5);"></i>
+                            Drag to set controller position
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-question"></i>
+                            See all available gesture
+                        </li>
+                        <li>
+                            <i class="fas fa-address-card" style="font-size: 16px;"></i>
+                            Show information about developer
+                        </li>
+                        <li>
+                            <i class="fas fa-child-reaching"></i>
+                            Enable / disable body gesture
+                        </li>
+                        <li>
+                            <i class="fas fa-camera-rotate" style="font-size: 16px;"></i>
+                            Switch primary & secondary camera
+                        </li>
+                        <li>
+                            <i class="fas fa-xmark" style="background-color:rgb(255, 42, 42, 1);"></i>
+                            Close app
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Integration Section -->
     <section id="integration" class="integration">
         <div class="container">
-            <h2 class="section-title">Developer Integration</h2>
-            <p class="section-subtitle">Extend Gerik's power to your apps and games</p>
-            
-            <div class="integration-grid">
-                <div class="integration-card">
-                    <div class="integration-icon">
-                        <i class="fas fa-wave-square"></i>
-                    </div>
-                    <h3>Hand & Body Pose Data</h3>
-                    <p>Access real-time MediaPipe detection results with hand and body coordinates</p>
-                    <code class="integration-code">ws://127.0.0.1:2014</code>
+            <div class="section-header">
+                <h2 class="section-title">Developer Integration</h2>
+                <p class="section-subtitle">Extend Gerik's power to your apps and games</p>        
+           </div>
+            <div class="integration-content">
+                <div class="integration-left">
+                    <img src="assets/gerik_integration.png" alt="Gerik Integration" class="integration-image">
                 </div>
-                <div class="integration-card">
-                    <div class="integration-icon">
-                        <i class="fas fa-camera"></i>
+                <div class="integration-right">
+                    <div class="integration-info">
+                        <p>
+                            <strong>Easy Integration:</strong>
+                            Developers can build custom controllers, interactive experiences, and AI-powered applications by tapping into Gerik's gesture detection capabilities. Whether you're building gaming tools, educational software, or innovative interfaces—Gerik's API gives you the gesture data you need.
+                            <br><br><strong>Integrate any language, framework, or game engine:</strong>
+                        </p>
+                        
+                        <div class="integration-icon">
+                            <i class="devicon-cplusplus-plain-wordmark"></i>
+                            <i class="devicon-csharp-plain-wordmark"></i>
+                            <i class="devicon-rust-plain"></i>
+                            <i class="devicon-javascript-plain"></i>
+                            <i class="devicon-python-plain"></i>
+                            <i class="devicon-qt-plain"></i>
+                            <i class="devicon-electron-original"></i>
+                            <i class="devicon-tauri-plain"></i>
+                            <i class="devicon-unity-plain"></i>
+                            <i class="devicon-unrealengine-plain"></i>
+                        </div>
+                        <strong>and many more</strong>
                     </div>
-                    <h3>Livestream Image Feed</h3>
-                    <p>Get the camera feed that powers the gesture detection in real-time</p>
-                    <code class="integration-code">http://127.0.0.1:2015</code>
                 </div>
-            </div>
-
-            <div class="integration-info">
-                <p><strong>Easy Integration:</strong> Developers can build custom controllers, interactive experiences, and AI-powered applications by tapping into Gerik's gesture detection capabilities. Whether you're building gaming tools, educational software, or innovative interfaces—Gerik's API gives you the gesture data you need.</p>
             </div>
         </div>
     </section>
@@ -199,41 +261,67 @@
     <!-- Value Proposition Section -->
     <section id="value" class="value-proposition">
         <div class="container">
-            <h2 class="section-title">Why Choose Gerik?</h2>
-            <p class="section-subtitle">Transform how you interact with your computer</p>
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Gerik?</h2>
+                <p class="section-subtitle">The future of desktop interaction is here—and it's affordable</p>
+            </div>
             
             <div class="value-grid">
                 <div class="value-card">
                     <div class="value-icon">💰</div>
-                    <h3>Affordable Innovation</h3>
-                    <p>Professional gesture control at a price everyone can afford. Check pricing on Microsoft Store.</p>
+                    <h3>Budget-Friendly Gesture Control</h3>
+                    <p>
+                        Realtime hand and body tracking without
+                        the enterprise price tag. What costs thousands 
+                        elsewhere, we deliver for only under $2.50.
+                    </p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🎮</div>
-                    <h3>Game Without Limits</h3>
-                    <p>Play any online or offline game using natural hand and body movements instead of traditional controllers.</p>
+                    <h3>Stop Re-Inventing the Wheel</h3>
+                    <p>
+                        Setting up your own gesture detection feature each time you start to
+                        develop a new game or app would be a pain. Just use Gerik's data
+                        and focus on your apps or games
+                    </p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🖥️</div>
-                    <h3>Universal App Control</h3>
-                    <p>Control any Windows desktop application with intuitive gestures. Works with everything you already use.</p>
+                    <h3>Universal Desktop Control</h3>
+                    <p>
+                        Works with every Windows app you already use. 
+                        From browsers to productivity tools, Gerik integrates 
+                        seamlessly into your workflow.
+                    </p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">👆</div>
-                    <h3>Touchscreen Effect</h3>
-                    <p>Turn any connected screen into an interactive, gesture-controlled touchscreen without hardware modifications.</p>
+                    <h3>Expensive Touchscreen Alternatives</h3>
+                    <p>
+                        Turn any screen into an interactive gesture interface. 
+                        No hardware modifications or expensive external devices needed.
+                        Just wave and control.
+                    </p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">⚡</div>
-                    <h3>Lightning Fast Response</h3>
-                    <p>Real-time gesture recognition with minimal latency for responsive and immersive control.</p>
+                    <h3>One-Time Payment</h3>
+                    <p>
+                        No monthly subscription. No annual pricing plans. Just pay
+                        once and its ready to use for any of your daily task or gaming controller.
+                    </p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🔒</div>
-                    <h3>Local & Private</h3>
-                    <p>Everything runs on your machine. No data sent to servers. Complete control and privacy guaranteed.</p>
+                    <h3>100% Local Privacy</h3>
+                    <p>
+                        Everything runs on your machine. No cloud
+                        . No data sharing. No privacy concerns
+                        . Complete control is yours.
+                    </p>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -241,8 +329,10 @@
     <section id="cta" class="final-cta">
         <div class="container">
             <h2 class="cta-headline">Ready to Transform Your Desktop?</h2>
-            <p class="cta-subheadline">Join thousands of users who control their world with gestures</p>
-            <a href="https://www.microsoft.com/store/apps/9NHLDZRJ7KMP" target="_blank" class="btn btn-large">Download Gerik Now</a>
+            <p class="cta-subheadline">Join the futures of desktop controlling</p>
+            <a href="https://get.microsoft.com/installer/download/9NVZTNZDV336?referrer=appbadge" target="_self" >
+                <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
+            </a>
         </div>
     </section>
 
@@ -250,15 +340,18 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <div class="footer-logo">🎯 Gerik</div>
+                <a href="#home" class="navbar-logo" style="text-decoration: none;color: rgb(81, 121, 255);">
+                    <span class="logo-icon"><img src="assets/logo.png" style="width: 100%;display: flex;"></span>
+                    <span class="logo-text">Gerik</span>
+                </a>
                 <p class="footer-credit">Created with passion for gesture control</p>
             </div>
             <div class="footer-social">
-                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/twprasetio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@twprasetio" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@twprasetio" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/trilaksonowp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/prasetiown" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
